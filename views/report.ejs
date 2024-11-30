@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance App - Reports</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Financial Reports</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/reports">Reports</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Income Report</h2>
+        <p>Total Income: $<%= totalIncome %></p>
+        <h2>Expense Report</h2>
+        <p>Total Expenses: $<%= totalExpenses %></p>
+        <h2>Summary Report</h2>
+        <p>Net Income: $<%= netIncome %></p>
+    </main>
+    <footer>
+        <p>&copy; 2023 Finance App</p>
+    </footer>
+</body>
+</html>

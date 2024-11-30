@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance App - Dashboard</title>
+    <link rel="stylesheet" href="../public/css/styles.css"> 
+</head>
+<body>
+    <header>
+        <h1>Your Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/reports">Reports</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Financial Summary</h2>
+        <div>
+            <h3>Total Income: $<%= totalIncome %></h3>
+            <h3>Total Expenses: $<%= totalExpenses %></h3>
+            <h3>Net Income: $<%= netIncome %></h3>
+        </div>
+        <h2>Recent Transactions</h2>
+        <ul>
+            <% transactions.forEach(function(transaction) { %>
+                <li><%= transaction.source %>: $<%= transaction.amount %> on <%= transaction.date.toDateString() %></li>
+            <% }); %>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2023 Finance App</p>
+    </footer>
+</body>
+</html>
